@@ -1,0 +1,11 @@
+{
+    "name": "vedaai-root",
+    "version": "1.0.0",
+    "scripts": {
+        "install:all": "npm install --prefix backend && npm install --prefix frontend",
+        "dev": "concurrently --kill-others-on-fail --names \"BACKEND,WORKER,FRONTEND\" --prefix-colors \"green,blue,magenta\" \"npm run dev --prefix backend\" \"npm run worker --prefix backend\" \"npm run dev --prefix frontend\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
